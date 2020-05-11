@@ -47,7 +47,3 @@ def parse_interfaces(parse,result)
                   "network": ipv4_addr.network.exploded
             })
     return(result)
-
-def parse_features(parse,result)
-    result = parse_interfaces(parse,result)
-    return(result)
