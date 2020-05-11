@@ -1,3 +1,17 @@
+#remove unwanted imports
+import json
+from ciscoconfparse import CiscoConfParse
+from ciscoconfparse.ccp_util import IPv4Obj
+import sys, os
+import collections
+import json, pyaml
+import yaml
+import xlrd
+import string
+import fileinput
+from jinja2 import Environment, FileSystemLoader
+import yaml
+
 def parse_interfaces(parse,result)
     interface_cmds = parse.find_objects(r"^interface ")
  
