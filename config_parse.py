@@ -40,18 +40,18 @@ import parse_features
     d = {}
     wb = xlrd.open_workbook('port_mapping.xlsx')
     sh = wb.sheet_by_index(0)  
-		for i in range(3):
-				cell_value_class = sh.cell(i,0).value
-				cell_value_id = sh.cell(i,1).value
-				d[cell_value_class] = cell_value_id
+	for i in range(3):
+		cell_value_class = sh.cell(i,0).value
+		cell_value_id = sh.cell(i,1).value
+		d[cell_value_class] = cell_value_id
 
-		text = "yamlout.yml"
-		for line in fileinput.input(text, inplace=True):
-				line = line.rstrip()
-				if not line:
-						continue
-				for f_key, f_value in d.items():
-						if f_key in line:
-								line = line.replace(f_key, f_value)
-								print(line)
-		return
+	text = "yamlout.yml"
+	for line in fileinput.input(text, inplace=True):
+	    line = line.rstrip()
+			if not line:
+				continue
+			for f_key, f_value in d.items():
+				if f_key in line:
+					line = line.replace(f_key, f_value)
+					print(line)
+	return
