@@ -12,7 +12,7 @@ import fileinput
 from jinja2 import Environment, FileSystemLoader
 import yaml
 
-def parse_interfaces(parse,result)
+def parse_interfaces(parse,result):
     interface_cmds = parse.find_objects(r"^interface ")
  
     # iterate over the resulting IOSCfgLine objects
