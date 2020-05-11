@@ -56,5 +56,3 @@ import parse_features
 								print(line)
 				return
 
-if __name__ == "__main__":
-    main()
